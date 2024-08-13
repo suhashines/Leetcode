@@ -21,4 +21,4 @@ def grid_unique_path(m,n):
 
     print(paths)
 
-grid_unique_path(3,7)
+grid_unique_path(3,5)

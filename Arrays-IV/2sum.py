@@ -18,6 +18,8 @@ def binSearch(arr,l,h,trgt):
 
 def two_sum(arr,trgt):
 
+    tmp = arr
+
     arr.sort()
 
     n = len(arr)
@@ -37,4 +39,37 @@ def two_sum(arr,trgt):
     return None
 
 
-print(two_sum([3,2,4],6))
+def optimal(arr,trgt):
+
+    tmp = []
+
+    for i in range(len(arr)):
+
+        tmp.append([arr[i],i])
+    
+    
+
+    #sorting the array
+
+    tmp.sort(key=lambda x: x[0])
+
+    print(tmp)
+
+    left = 0
+    right = len(tmp)-1
+
+    print(f"right {right}")
+
+    while(left<right):
+
+        if(tmp[left][0]+tmp[right][0]==trgt): return [tmp[left][1],tmp[right][1]]
+
+        elif(tmp[left][0]+tmp[right][0]<trgt):
+            left +=1
+        else:
+
+            right-=1
+
+    return []
+
+print(optimal([2,5,7,3,8],8))
