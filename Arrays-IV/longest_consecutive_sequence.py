@@ -43,4 +43,4 @@ def optimal(arr):
 
     print(f"longest {longest}")
 
-optimal([1,2,4,5,6,7,10,11,12])
+optimal([1,6,2,7,4,5])
